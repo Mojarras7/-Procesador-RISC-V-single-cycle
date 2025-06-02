@@ -1,0 +1,201 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do SingleCycle_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying d:/quartus/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:19 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v 
+# -- Compiling module SingleCycle
+# 
+# Top level modules:
+# 	SingleCycle
+# End time: 18:46:19 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/RegisterFile.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:20 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/RegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 18:46:21 on Jun 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/Mux.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:21 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/Mux.v 
+# -- Compiling module Mux
+# 
+# Top level modules:
+# 	Mux
+# End time: 18:46:21 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ImmediateGenerator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:21 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ImmediateGenerator.v 
+# -- Compiling module ImmediateGenerator
+# 
+# Top level modules:
+# 	ImmediateGenerator
+# End time: 18:46:21 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/DataMemory.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:21 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 18:46:21 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ControlUnit.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:21 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 18:46:21 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/BranchComparator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:21 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/BranchComparator.v 
+# -- Compiling module BranchComparator
+# 
+# Top level modules:
+# 	BranchComparator
+# End time: 18:46:22 on Jun 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALUControl.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:22 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALUControl.v 
+# -- Compiling module ALUControl
+# 
+# Top level modules:
+# 	ALUControl
+# End time: 18:46:22 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALU.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:22 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 18:46:22 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/Adder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:22 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/Adder.v 
+# -- Compiling module Adder
+# 
+# Top level modules:
+# 	Adder
+# End time: 18:46:22 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ProgramCounter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:22 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ProgramCounter.v 
+# -- Compiling module ProgramCounter
+# 
+# Top level modules:
+# 	ProgramCounter
+# End time: 18:46:22 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/InstructionMemory.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:22 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/InstructionMemory.v 
+# -- Compiling module InstructionMemory
+# 
+# Top level modules:
+# 	InstructionMemory
+# End time: 18:46:23 on Jun 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SyngleCycle_tb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 18:46:23 on Jun 01,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle" C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SyngleCycle_tb.v 
+# -- Compiling module SyngleCycle_tb
+# 
+# Top level modules:
+# 	SyngleCycle_tb
+# End time: 18:46:23 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  SyngleCycle_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" SyngleCycle_tb 
+# Start time: 18:46:23 on Jun 01,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v(38): (vopt-2685) [TFMPC] - Too few port connections for 'control'.  Expected 8, found 7.
+# ** Warning: C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v(38): (vopt-2718) [TFMPC] - Missing connection for port 'ALUOp'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# Loading work.SyngleCycle_tb(fast)
+# Loading work.SingleCycle(fast)
+# Loading work.ProgramCounter(fast)
+# Loading work.InstructionMemory(fast)
+# Loading work.ControlUnit(fast)
+# Loading work.RegisterFile(fast)
+# Loading work.ImmediateGenerator(fast)
+# Loading work.ALUControl(fast)
+# Loading work.Mux(fast)
+# Loading work.ALU(fast)
+# Loading work.DataMemory(fast)
+# Loading work.BranchComparator(fast)
+# Loading work.Adder(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'immediateSelect'. The port definition is at: C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ImmediateGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /SyngleCycle_tb/DUT/imm_gen File: C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v Line: 59
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (7) for port 'funct7'. The port definition is at: C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALUControl.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /SyngleCycle_tb/DUT/alu_ctrl File: C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v Line: 65
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "program.mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/InstructionMemory.v(8)
+#    Time: 0 ps  Iteration: 0  Instance: /SyngleCycle_tb/DUT/inst_mem
+# Time=0 | PC=00000000 | Instruction=xxxxxxxx
+# Time=15 | PC=xxxxxxxx | Instruction=xxxxxxxx
+# ** Note: $finish    : C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SyngleCycle_tb.v(20)
+#    Time: 210 ps  Iteration: 0  Instance: /SyngleCycle_tb
+# 1
+# Break in Module SyngleCycle_tb at C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SyngleCycle_tb.v line 20
+# End time: 18:48:35 on Jun 01,2025, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 6

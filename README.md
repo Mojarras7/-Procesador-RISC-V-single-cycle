@@ -5,8 +5,7 @@ Este proyecto implementa un procesador **RISC-V** de un solo ciclo en Verilog, c
 ## 📁 Estructura del Proyecto
 
 - riscv_single_cycle/
-  - src/
-    - top.v              # Módulo principal (interconexión)
+    - SingleCycle.v              # Módulo principal (interconexión)
     - program_counter.v
     - instruction_memory.v
     - control_unit.v
@@ -18,11 +17,8 @@ Este proyecto implementa un procesador **RISC-V** de un solo ciclo en Verilog, c
     - mux.v
     - branch_comparator.v
     - adder.v
-  - testbench/
-    - top_tb.v           # Testbench principal
-    - (otros archivos de prueba)
-  - docs_y_capturas/
-    - informe.pdf        # Informe con explicación, simulaciones y capturas
+    - SingleCycle_tb.v           # Testbench principal
+    - Procesador Single Cycle Risc-V.pdf        # Informe con explicación, simulaciones y capturas
 
 
 
@@ -36,11 +32,10 @@ Incluye instrucciones básicas:
 
 ## 🚀 Estado del Proyecto
 
-- [ ] `RegisterFile`
-- [ ] `ALU`
-- [ ] `ALUControl`
-- [ ] `ControlUnit`
-- [ ] Resto de módulos
-- [ ] Integración en `top.v`
-- [ ] Simulación final
-- [ ] Informe y entrega
+- [x] `RegisterFile`
+- [x] `ALU`
+- [x] `ALUControl`
+- [x] `ControlUnit`
+- [x] Resto de módulos
+- [x] Integración en `SingleCycle.v`
+- [x] Informe y entrega

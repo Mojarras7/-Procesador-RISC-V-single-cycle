@@ -1,0 +1,132 @@
+module Top(
+    input clk,
+    input reset
+);
+
+    wire [31:0] PC, next_PC, instruction;
+    wire [6:0] opcode;
+    wire [4:0] rd, rs1, rs2;
+    wire [2:0] funct3;
+    wire [6:0] funct7;
+    wire [31:0] imm, read_data1, read_data2, alu_result, mem_data, write_data;
+    wire [3:0] alu_control;
+    wire [31:0] pc_plus_4, branch_target;
+    wire branch_taken;
+
+    // Señales de control
+    wire RegWrite, ALUSrc, MemWrite, MemRead, MemToReg, Branch;
+    wire [1:0] ALUOp; 
+
+    ProgramCounter pc_reg (
+        .clk(clk),
+        .reset(reset),
+        .pc_in(next_PC),
+        .pc_out(PC)
+    );
+    InstructionMemory inst_mem (
+        .addr(PC),
+        .instruction(instruction)
+    );
+
+    assign opcode = instruction[6:0];
+    assign rd     = instruction[11:7];
+    assign funct3 = instruction[14:12];
+    assign rs1    = instruction[19:15];
+    assign rs2    = instruction[24:20];
+    assign funct7 = instruction[31:25];
+
+        ControlUnit control (
+        .opcode(opcode),
+        .RegWrite(RegWrite),
+        .ALUSrc(ALUSrc),
+        .MemWrite(MemWrite),
+        .MemRead(MemRead),
+        .MemToReg(MemToReg),
+        .Branch(Branch)
+    );
+
+        RegisterFile reg_file (
+        .clk(clk),
+        .regWriteEnable(RegWrite), 
+        .readRegister1(rs1),
+        .readRegister2(rs2),
+        .writeRegister(rd),
+        .writeData(write_data),
+        .readData1(read_data1),
+        .readData2(read_data2)
+    );
+
+    ImmediateGenerator imm_gen (
+        .instruction(instruction),
+        .immediate(imm) 
+    );
+
+    ALUControl alu_ctrl (
+        .funct3(funct3),
+        .funct7(funct7),
+        .ALUOp(ALUOp),
+        .alu_control(alu_control)
+    );
+
+    wire [31:0] alu_operand2;
+    Mux alu_mux (
+        .in0(read_data2),
+        .in1(imm),
+        .sel(ALUSrc),
+        .out(alu_operand2)
+    );
+
+    ALU alu (
+        .A(read_data1),
+        .B(alu_operand2),
+        .ALU_Control(alu_control),
+        .ALU_result(alu_result)
+    );
+
+
+        DataMemory data_mem (
+        .clk(clk),
+        .MemRead(MemRead),
+        .MemWrite(MemWrite),
+        .addr(alu_result),
+        .write_data(read_data2),
+        .read_data(mem_data)
+    );
+
+    Mux2 writeback_mux (
+        .in0(alu_result),
+        .in1(mem_data),
+        .sel(MemToReg),
+        .out(write_data)
+    );
+
+
+        BranchComparator comparator (
+        .rs1(read_data1),
+        .rs2(read_data2),
+        .funct3(funct3),
+        .branch(branch_taken)
+    );
+
+    Adder pc_adder_4 (
+        .in1(PC),
+        .in2(32'd4),
+        .sum(pc_plus_4)
+    );
+
+    Adder pc_branch_adder (
+        .in1(PC),
+        .in2(imm),
+        .sum(branch_target)
+    );
+
+    wire pc_src = Branch & branch_taken;
+
+    Mux pc_mux (
+        .in0(pc_plus_4),
+        .in1(branch_target),
+        .sel(pc_src),
+        .out(next_PC)
+    );
+endmodule
+

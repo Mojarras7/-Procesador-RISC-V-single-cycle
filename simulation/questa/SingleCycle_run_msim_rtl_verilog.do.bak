@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/SingleCycle.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/RegisterFile.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/Mux.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ImmediateGenerator.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/DataMemory.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ControlUnit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/BranchComparator.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALUControl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ALU.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/Adder.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/ProgramCounter.v}
+vlog -vlog01compat -work work +incdir+C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle {C:/Users/edwin/Desktop/-Procesador-RISC-V-single-cycle/InstructionMemory.v}
+
